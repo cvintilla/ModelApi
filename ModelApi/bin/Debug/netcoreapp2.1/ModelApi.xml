@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ModelApi</name>
+    </assembly>
+    <members>
+        <member name="T:ModelApi.Controllers.ValuesController">
+            <summary>
+            Sample API go to api/swagger
+            </summary>
+        </member>
+    </members>
+</doc>
