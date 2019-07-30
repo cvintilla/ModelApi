@@ -8,7 +8,7 @@ namespace Services
 {
     public class StudentService : IStudentService
     {
-        public Guid StoreStudent(Student student)
+        public Guid StoreStudent(StudentDocument student)
         {
             throw new NotImplementedException();
         }

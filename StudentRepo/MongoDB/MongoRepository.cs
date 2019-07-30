@@ -1,4 +1,5 @@
 ﻿using Domain;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -42,20 +43,20 @@ namespace Repository
 
             var filter = collection.Find(x => x.Id == newStudent.Id).FirstOrDefault();
 
-            var result = collection.UpdateOne(filter, newStudent);
+            collection.InsertOne(newStudent);
 
-            return result.UpsertedId.AsGuid;
+            return newStudent.Id;
         }
-        
-        public Guid DeleteStudent(Student student)
+
+        public Guid DeleteStudent(Guid studentId)
         {
             var collection = StudentCollection();
 
-            var filter = collection.Find(x => x.Id == student.Id).FirstOrDefault();
+            var filter = collection.Find(x => x.Id == studentId).Filter;
 
             collection.DeleteOne(filter);
 
-            return student.Id;
+            return studentId;
         }
 
         public List<Student> GetStudents()

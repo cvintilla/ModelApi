@@ -5,6 +5,6 @@ namespace Services
 {
     public interface IStudentService
     {
-        Guid StoreStudent(Student student);
+        Guid StoreStudent(StudentDocument student);
     }
 }

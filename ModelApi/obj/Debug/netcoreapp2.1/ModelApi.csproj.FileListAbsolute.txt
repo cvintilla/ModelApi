@@ -4,11 +4,9 @@ C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\ModelApi.r
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\ModelApi.dll
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\ModelApi.pdb
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Domain.dll
-C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\DTO.dll
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Repository.dll
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Service.dll
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Domain.pdb
-C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\DTO.pdb
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Service.pdb
 C:\Users\cvint\source\repos\ModelApi\ModelApi\bin\Debug\netcoreapp2.1\Repository.pdb
 C:\Users\cvint\source\repos\ModelApi\ModelApi\obj\Debug\netcoreapp2.1\ModelApi.csprojAssemblyReference.cache

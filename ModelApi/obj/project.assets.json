@@ -4002,7 +4002,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -4778,6 +4778,57 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
+        }
+      },
+      "Unity/5.11.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Unity.Abstractions.dll": {},
+          "lib/netcoreapp2.0/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Unity.Abstractions.dll": {},
+          "lib/netcoreapp2.0/Unity.Container.dll": {}
+        }
+      },
+      "Unity.Abstractions/3.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp2.0/Unity.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Unity.Abstractions.dll": {}
+        }
+      },
+      "Unity.Container/5.8.9": {
+        "type": "package",
+        "dependencies": {
+          "Unity.Abstractions": "3.3.1"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/Unity.Container.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Unity.Container.dll": {}
+        }
+      },
+      "Unity.Microsoft.DependencyInjection/2.1.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "1.1.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "1.1.1",
+          "Microsoft.NETCore.App": "1.1.2",
+          "Unity.Abstractions": "3.3.1",
+          "Unity.Container": "5.8.9"
+        },
+        "compile": {
+          "lib/netcoreapp1.1/Unity.Microsoft.DependencyInjection.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.1/Unity.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Domain/1.0.0": {
@@ -10649,10 +10700,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
-      "sha512": "qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "sha512": "k3rsGIl3aG0AJVIxs8z2mTvF4BSFJtkHSYbnhgcdZX9L80Hr5U8/VYHlci26mJz3gZSFX1JjRyEQZhbDnBb4tw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
         ".signature.p7s",
         "LICENSE.TXT",
@@ -10667,7 +10718,7 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12624,6 +12675,96 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Unity/5.11.1": {
+      "sha512": "oRyzUiIJ/jMfZIMVzGhM8x7Twg3xFkLxDn8kG3srRDk1GuWJX29k8FixnsPSR72KjSTWi9ciNWEh+DPsZvQPww==",
+      "type": "package",
+      "path": "unity/5.11.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Unity.Abstractions.dll",
+        "lib/net40/Unity.Abstractions.pdb",
+        "lib/net40/Unity.Container.dll",
+        "lib/net40/Unity.Container.pdb",
+        "lib/net45/Unity.Abstractions.dll",
+        "lib/net45/Unity.Abstractions.pdb",
+        "lib/net45/Unity.Container.dll",
+        "lib/net45/Unity.Container.pdb",
+        "lib/net46/Unity.Abstractions.dll",
+        "lib/net46/Unity.Abstractions.pdb",
+        "lib/net46/Unity.Container.dll",
+        "lib/net46/Unity.Container.pdb",
+        "lib/net47/Unity.Abstractions.dll",
+        "lib/net47/Unity.Abstractions.pdb",
+        "lib/net47/Unity.Container.dll",
+        "lib/net47/Unity.Container.pdb",
+        "lib/netcoreapp1.0/Unity.Abstractions.dll",
+        "lib/netcoreapp1.0/Unity.Abstractions.pdb",
+        "lib/netcoreapp1.0/Unity.Container.dll",
+        "lib/netcoreapp1.0/Unity.Container.pdb",
+        "lib/netcoreapp2.0/Unity.Abstractions.dll",
+        "lib/netcoreapp2.0/Unity.Abstractions.pdb",
+        "lib/netcoreapp2.0/Unity.Container.dll",
+        "lib/netcoreapp2.0/Unity.Container.pdb",
+        "lib/netstandard1.0/Unity.Abstractions.dll",
+        "lib/netstandard1.0/Unity.Abstractions.pdb",
+        "lib/netstandard1.0/Unity.Container.dll",
+        "lib/netstandard1.0/Unity.Container.pdb",
+        "lib/netstandard2.0/Unity.Abstractions.dll",
+        "lib/netstandard2.0/Unity.Abstractions.pdb",
+        "lib/netstandard2.0/Unity.Container.dll",
+        "lib/netstandard2.0/Unity.Container.pdb",
+        "unity.5.11.1.nupkg.sha512",
+        "unity.nuspec"
+      ]
+    },
+    "Unity.Abstractions/3.3.1": {
+      "sha512": "6Noq6W6cnB+TFgCf9FfgCN9wTVOiKI0eC1tl4dvbA3xg4ZSULKlpXMf2TVM945y/c1KvEdrq19joxHBOBB8rJA==",
+      "type": "package",
+      "path": "unity.abstractions/3.3.1",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Unity.Abstractions.dll",
+        "lib/net45/Unity.Abstractions.dll",
+        "lib/net46/Unity.Abstractions.dll",
+        "lib/net47/Unity.Abstractions.dll",
+        "lib/netcoreapp1.0/Unity.Abstractions.dll",
+        "lib/netcoreapp2.0/Unity.Abstractions.dll",
+        "lib/netstandard1.0/Unity.Abstractions.dll",
+        "lib/netstandard2.0/Unity.Abstractions.dll",
+        "unity.abstractions.3.3.1.nupkg.sha512",
+        "unity.abstractions.nuspec"
+      ]
+    },
+    "Unity.Container/5.8.9": {
+      "sha512": "jZfb3JibP4nHq4VV+/5+p4Y7Zuy01dF6rPpNGb2c/DmcMS6D2aFkok9B8wysQnJWOa0xRHobHn9HaKOHqd/mcg==",
+      "type": "package",
+      "path": "unity.container/5.8.9",
+      "files": [
+        ".signature.p7s",
+        "lib/net40/Unity.Container.dll",
+        "lib/net45/Unity.Container.dll",
+        "lib/net46/Unity.Container.dll",
+        "lib/net47/Unity.Container.dll",
+        "lib/netcoreapp1.0/Unity.Container.dll",
+        "lib/netcoreapp2.0/Unity.Container.dll",
+        "lib/netstandard1.0/Unity.Container.dll",
+        "lib/netstandard2.0/Unity.Container.dll",
+        "unity.container.5.8.9.nupkg.sha512",
+        "unity.container.nuspec"
+      ]
+    },
+    "Unity.Microsoft.DependencyInjection/2.1.1": {
+      "sha512": "Zywjx/pbU9uqWB2JhtVHjT6n489guFRmffGBXdMYOuvbZVpap3IcqvM1MCkCCkdOvWmLJKVsF/Rq1xroF/j0Mw==",
+      "type": "package",
+      "path": "unity.microsoft.dependencyinjection/2.1.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netcoreapp1.1/Unity.Microsoft.DependencyInjection.dll",
+        "lib/netstandard2.0/Unity.Microsoft.DependencyInjection.dll",
+        "unity.microsoft.dependencyinjection.2.1.1.nupkg.sha512",
+        "unity.microsoft.dependencyinjection.nuspec"
+      ]
+    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
@@ -12649,7 +12790,9 @@
       "Repository >= 1.0.0",
       "Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 4.0.1",
-      "Swashbuckle.AspNetCore.Filters >= 3.1.0"
+      "Swashbuckle.AspNetCore.Filters >= 3.1.0",
+      "Unity >= 5.11.1",
+      "Unity.Microsoft.DependencyInjection >= 2.1.1"
     ]
   },
   "packageFolders": {
@@ -12726,6 +12869,14 @@
           "Swashbuckle.AspNetCore.Filters": {
             "target": "Package",
             "version": "[3.1.0, )"
+          },
+          "Unity": {
+            "target": "Package",
+            "version": "[5.11.1, )"
+          },
+          "Unity.Microsoft.DependencyInjection": {
+            "target": "Package",
+            "version": "[2.1.1, )"
           }
         },
         "imports": [

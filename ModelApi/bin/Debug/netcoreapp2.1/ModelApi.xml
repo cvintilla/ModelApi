@@ -4,7 +4,7 @@
         <name>ModelApi</name>
     </assembly>
     <members>
-        <member name="T:ModelApi.Controllers.ValuesController">
+        <member name="T:ModelApi.Controllers.StudentController">
             <summary>
             Sample API go to api/swagger
             </summary>
