@@ -1,0 +1,12 @@
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\bin\Debug\netcoreapp2.2\Repository.deps.json
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\bin\Debug\netcoreapp2.2\Repository.dll
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\bin\Debug\netcoreapp2.2\Repository.pdb
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.csprojAssemblyReference.cache
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.csproj.CoreCompileInputs.cache
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.AssemblyInfoInputs.cache
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.AssemblyInfo.cs
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.csproj.CopyComplete
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.dll
+C:\Users\cvint\source\repos\ModelApi\StudentRepo\obj\Debug\netcoreapp2.2\Repository.pdb

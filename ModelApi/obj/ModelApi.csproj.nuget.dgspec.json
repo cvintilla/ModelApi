@@ -1,0 +1,272 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cvint\\source\\repos\\ModelApi\\ModelApi\\ModelApi.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\cvint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cvint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\cvint\\source\\repos\\ModelApi\\ModelApi\\ModelApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cvint\\source\\repos\\ModelApi\\ModelApi\\ModelApi.csproj",
+        "projectName": "ModelApi",
+        "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\ModelApi\\ModelApi.csproj",
+        "packagesPath": "C:\\Users\\cvint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\ModelApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cvint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\Service.csproj"
+              },
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Unity": {
+              "target": "Package",
+              "version": "[5.11.1, )"
+            },
+            "Unity.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\Service.csproj",
+        "projectName": "Service",
+        "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\Service.csproj",
+        "packagesPath": "C:\\Users\\cvint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cvint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\Repository.csproj",
+        "packagesPath": "C:\\Users\\cvint\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\StudentRepo\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\cvint\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\cvint\\source\\repos\\ModelApi\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.8.1, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

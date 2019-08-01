@@ -17,6 +17,28 @@ namespace Repository
             _constants = constants;
         }
 
+        public List<Student> GetStudents()
+        {
+            var collection = StudentCollection();
+
+            FilterDefinition<Student> filter = FilterDefinition<Student>.Empty;
+
+            var results = collection.Find(filter).ToList();
+
+            return results;
+        }
+
+        public Guid UpdateStudent(Student newStudent)
+        {
+            var collection = StudentCollection();
+
+            var filter = collection.Find(x => x.Id == newStudent.Id).Filter;
+
+            collection.ReplaceOne(filter, newStudent);
+
+            return newStudent.Id;
+        }
+
         public Guid CreateStudent(Student student)
         {
             var collection = StudentCollection();
@@ -25,6 +47,25 @@ namespace Repository
 
             return student.Id;
         }
+
+        public long DeleteStudent(Student student)
+        {
+            var collection = StudentCollection();
+
+
+            // TODO:
+            // needs to be tested
+            var filter = collection.Find(x => x.Id == student.Id
+            || x.Name == student.Name
+            || x.Course == student.Course
+            || x.GPA == student.GPA)
+                .Filter;
+
+            var deleteResult = collection.DeleteOne(filter);
+
+            return deleteResult.DeletedCount;
+        }
+
 
         public List<Guid> CreateStudents(List<Student> students)
         {
@@ -35,39 +76,6 @@ namespace Repository
             var guids = students.Select(x => x.Id).ToList();
 
             return guids;
-        }
-
-        public Guid UpdateStudent(Student newStudent)
-        {
-            var collection = StudentCollection();
-
-            var filter = collection.Find(x => x.Id == newStudent.Id).FirstOrDefault();
-
-            collection.InsertOne(newStudent);
-
-            return newStudent.Id;
-        }
-
-        public Guid DeleteStudent(Guid studentId)
-        {
-            var collection = StudentCollection();
-
-            var filter = collection.Find(x => x.Id == studentId).Filter;
-
-            collection.DeleteOne(filter);
-
-            return studentId;
-        }
-
-        public List<Student> GetStudents()
-        {
-            var collection = StudentCollection();
-
-            FilterDefinition<Student> filter = FilterDefinition<Student>.Empty;
-
-            var results = collection.Find(filter).ToList();
-
-            return results;
         }
 
         private IMongoCollection<Student> StudentCollection()
@@ -84,7 +92,7 @@ namespace Repository
             var client = new MongoClient();
 
             var database = client.GetDatabase(_constants.databaseName);
-            
+
             return database;
         }
     }

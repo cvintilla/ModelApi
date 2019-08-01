@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using Repository;
 using Services;
 
@@ -15,24 +16,43 @@ namespace ModelApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase
-    {
+    { 
         private readonly IMongoRepository _mongoRepository;
 
-        public StudentController(IMongoRepository mongoRepository)
+        private readonly ILogger<StudentController> _logger;
+
+        public StudentController(IMongoRepository mongoRepository, ILogger<StudentController> logger)
         {
             _mongoRepository = mongoRepository;
+            _logger = logger;
         }
 
-        // GET api/values
         [HttpGet]
         public List<Student> Get()
         {
             var result = _mongoRepository.GetStudents();
 
+            if (!result.Any())
+            {
+                _logger.LogInformation("No Data in the database.");
+            }
+
             return result;
         }
 
-        // POST api/values
+        [HttpPut]
+        public ActionResult<Guid> Put([FromBody] Student student)
+        {
+            var response = _mongoRepository.UpdateStudent(student);
+
+            if (response == Guid.Empty)
+            {
+                _logger.LogInformation("No student updated.");
+            }
+
+            return response;
+        }
+
         [HttpPost]
         public ActionResult<Guid> Post([FromBody] Student student)
         {
@@ -41,36 +61,36 @@ namespace ModelApi.Controllers
             return studentID;
         }
 
-        [HttpPut]
-        public ActionResult<Guid> Put([FromBody] Student student)
+        [HttpDelete]
+        public long Delete([FromBody] Student student)
         {
-            var response = _mongoRepository.UpdateStudent(student);
+            var result = _mongoRepository.DeleteStudent(student);
 
-            return response;
+            return result;
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "value";
         }
 
-        // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
             Console.WriteLine();
         }
 
-        // DELETE api/values/5
-        [HttpDelete]
-        public Guid Delete([FromBody] Guid student)
+        [HttpPost("{id}")]
+        public void Post(int id, [FromBody] string value)
         {
+            Console.WriteLine();
+        }
 
-            var result = _mongoRepository.DeleteStudent(student);
-
-            return result;
+        [HttpDelete("{id}")]
+        public void Delete(int id, [FromBody] string value)
+        {
+            Console.WriteLine();
         }
     }
 }

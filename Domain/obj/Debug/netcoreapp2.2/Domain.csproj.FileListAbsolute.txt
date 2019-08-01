@@ -1,0 +1,9 @@
+C:\Users\cvint\source\repos\ModelApi\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+C:\Users\cvint\source\repos\ModelApi\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\cvint\source\repos\ModelApi\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+C:\Users\cvint\source\repos\ModelApi\Domain\obj\Debug\netcoreapp2.2\Domain.pdb
