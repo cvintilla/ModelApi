@@ -1,8 +1,5 @@
 # ModelApi
 
-Summary:
-  -An API set up to quickly create new API Projects.
+A Web API made to quickly set up new Web API Projects.
 
-Uses:
-  -Swagger
-  -Mongo DB
+Uses Swagger & Mongo DB
