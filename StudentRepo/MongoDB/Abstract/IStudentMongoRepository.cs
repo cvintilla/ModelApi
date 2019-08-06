@@ -5,13 +5,11 @@ using System.Text;
 
 namespace Repository
 {
-    public interface IMongoRepository
+    public interface IStudentMongoRepository
     {
         List<Student> GetStudents();
-        Guid UpdateStudent(Student newStudent);
+        Guid UpdateStudentById(Guid id, Student newStudent);
         Guid CreateStudent(Student student);
-        long DeleteStudent(Student studentId);
-
-        List<Guid> CreateStudents(List<Student> students);
+        long DeleteStudentById(Guid studentId);
     }
 }

@@ -11,86 +11,76 @@ using Services;
 namespace ModelApi.Controllers
 {
     /// <summary>
-    /// Sample API go to api/swagger
+    /// Model Student Controller
     /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class StudentController : ControllerBase
     { 
-        private readonly IMongoRepository _mongoRepository;
-
+        private readonly IStudentService _studentService;
         private readonly ILogger<StudentController> _logger;
 
-        public StudentController(IMongoRepository mongoRepository, ILogger<StudentController> logger)
+        /// <summary>
+        /// Default Constructor
+        /// </summary>
+        /// <param name="studentService">The Student Service</param>
+        /// <param name="logger"></param>
+        public StudentController(IStudentService studentService, ILogger<StudentController> logger)
         {
-            _mongoRepository = mongoRepository;
+            _studentService = studentService;
             _logger = logger;
         }
 
+        /// <summary>
+        /// Gets all the students in the db
+        /// </summary>
+        /// <returns>Returns a list of Students</returns>
         [HttpGet]
         public List<Student> Get()
         {
-            var result = _mongoRepository.GetStudents();
-
-            if (!result.Any())
-            {
-                _logger.LogInformation("No Data in the database.");
-            }
+            var result = _studentService.GetStudents();
 
             return result;
         }
 
-        [HttpPut]
-        public ActionResult<Guid> Put([FromBody] Student student)
+        /// <summary>
+        /// Updates the Student by the Student ID.
+        /// </summary>
+        /// <param name="id">The ID of the student to be updated</param>
+        /// <param name="student">The new student properties that will replace the old</param>
+        /// <returns>Returns the ID of the student that will be updated</returns>
+        [HttpPut("{id}")]
+        public Guid Put(Guid id, Student student)
         {
-            var response = _mongoRepository.UpdateStudent(student);
-
-            if (response == Guid.Empty)
-            {
-                _logger.LogInformation("No student updated.");
-            }
+            var response = _studentService.UpdateStudentById(id, student);
 
             return response;
         }
 
+        /// <summary>
+        /// Creates a new student
+        /// </summary>
+        /// <param name="student">The new student to be added to the db</param>
+        /// <returns>Returns the ID of the student that has been created</returns>
         [HttpPost]
         public ActionResult<Guid> Post([FromBody] Student student)
         {
-            var studentID = _mongoRepository.CreateStudent(student);
+            var studentID = _studentService.CreateStudent(student);
 
             return studentID;
         }
 
-        [HttpDelete]
-        public long Delete([FromBody] Student student)
+        /// <summary>
+        /// Deletes a student by the ID of the student
+        /// </summary>
+        /// <param name="id">The ID of the student to be deleted</param>
+        /// <returns>Returns 1 if the student has been deleted</returns>
+        [HttpDelete("{id}")]
+        public long Delete(Guid id)
         {
-            var result = _mongoRepository.DeleteStudent(student);
+            var result = _studentService.DeleteStudentById(id);
 
             return result;
-        }
-
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
-        {
-            return "value";
-        }
-
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-            Console.WriteLine();
-        }
-
-        [HttpPost("{id}")]
-        public void Post(int id, [FromBody] string value)
-        {
-            Console.WriteLine();
-        }
-
-        [HttpDelete("{id}")]
-        public void Delete(int id, [FromBody] string value)
-        {
-            Console.WriteLine();
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 
 namespace Repository
 {
-    public class MongoRepository : IMongoRepository
+    public class StudentMongoRepository : IStudentMongoRepository
     {
         private readonly MongoConstants _constants;
 
-        public MongoRepository(MongoConstants constants)
+        public StudentMongoRepository(MongoConstants constants)
         {
             _constants = constants;
         }
@@ -28,11 +28,11 @@ namespace Repository
             return results;
         }
 
-        public Guid UpdateStudent(Student newStudent)
+        public Guid UpdateStudentById(Guid id, Student newStudent)
         {
             var collection = StudentCollection();
 
-            var filter = collection.Find(x => x.Id == newStudent.Id).Filter;
+            var filter = collection.Find(x => x.Id == id).Filter;
 
             collection.ReplaceOne(filter, newStudent);
 
@@ -48,34 +48,15 @@ namespace Repository
             return student.Id;
         }
 
-        public long DeleteStudent(Student student)
+        public long DeleteStudentById(Guid id)
         {
             var collection = StudentCollection();
 
-
-            // TODO:
-            // needs to be tested
-            var filter = collection.Find(x => x.Id == student.Id
-            || x.Name == student.Name
-            || x.Course == student.Course
-            || x.GPA == student.GPA)
-                .Filter;
+            var filter = collection.Find(x => x.Id == id).Filter;
 
             var deleteResult = collection.DeleteOne(filter);
 
             return deleteResult.DeletedCount;
-        }
-
-
-        public List<Guid> CreateStudents(List<Student> students)
-        {
-            var collection = StudentCollection();
-
-            collection.InsertMany(students);
-
-            var guids = students.Select(x => x.Id).ToList();
-
-            return guids;
         }
 
         private IMongoCollection<Student> StudentCollection()
